@@ -1,9 +1,14 @@
-/* :root {
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
     --nav-bg: #F7B787;
     --background-color: #F9E8D9;
     --dark-text-color: #111111;
     --light-text-color: #F9E8D9;
     --first-button: #527853;
+    --hover-button: #7aa87c;
     --second-button: #EE7214;
 }
 
@@ -37,4 +42,33 @@
 
 .shoppingCart {
     color: white;
+}
+
+.productCard {
+    background-color: var(--background-color);
+    margin: 1em;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.button-bg {
+    background-color: var(--first-button);
+    color: var(--light-text-color);
+}
+
+.button-bg-hover {
+    background-color: var(--hover-button);
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1em; 
+    padding: 2em;
+}
+
+/* .border {
+    border: 2px solid red;
 } */
