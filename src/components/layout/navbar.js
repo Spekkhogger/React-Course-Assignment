@@ -4,7 +4,7 @@ import SearchResults from "../../hooks/searchBar";
 
 export default function Navbar() {
     return (<nav className="nav flex flex-col">
-        <div>
+        <div className="flex justify-between">
         <NavLink to="/" className="logo font-mono">Ellisiv's Outlet</NavLink>
         <ul>
             <li>
@@ -16,7 +16,7 @@ export default function Navbar() {
             </li> 
         </ul>
         </div>
-        <div>
+        <div className="flex items-center justify-center">
             <SearchResults />
         </div>
     </nav>)

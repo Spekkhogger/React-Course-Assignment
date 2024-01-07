@@ -11,37 +11,33 @@ export default function SearchResults() {
         const searchTerm = event.target.value;
         setSearchTerm(searchTerm); 
     }
-    console.log(searchTerm); 
 
     const filteredResults = results.filter((item) =>
     item.title.toLowerCase().startsWith(searchTerm.toLowerCase())
     );
 
-    console.log(filteredResults);
-
     return (
-        <div>
+        <div className="relative">
             <input 
             type="text"
             placeholder="Search..."
             value={searchTerm}
             onChange={handleSearch}
-            className="border rounded-md px-4 py-2 w-64"
-            >
-            
-            </input>
-
-            <ul className="mt-4">
+            className="border rounded-md px-4 py-2 w-64 text-black"
+            />
+            {isLoading ? (
+                <p>Loading...</p>
+            ) : searchTerm !== "" ? (
+            <ul className="flex flex-col absolute">
             {filteredResults.map((item, index) => (
-                <li key={index} className=" p-2 my-1">
-                	<Link to={`product/${item.id}`} className="flex items-center justify-center px-4 py-2 border border-transparent text-sm font-medium rounded-md text-white button-bg hover:bg-gray-600">
-						View product
+                <li key={index} className="p-2">
+                	<Link to={`product/${item.id}`} className="block px-4 py-2 rounded-md button-bg hover:bg-gray-600">
                         <h3>{item.title}</h3>
-                        <p>{item.price}</p>
 					</Link>
                 </li>
             ))}
             </ul>
+            ) : null}
         </div>
     );
 }
