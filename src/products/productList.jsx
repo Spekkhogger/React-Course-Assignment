@@ -1,6 +1,7 @@
-import { apiURL } from "../api";
-import useApi from "../hooks/useAPI";
 import ProductItem from "./productItem";
+import {CartPage} from "../pages/Cart";
+import useApi from "../hooks/useAPI";
+import { apiURL } from "../api";
 
 export default function ProductList() {
     const { data: products, isLoading, isError} = useApi(apiURL);

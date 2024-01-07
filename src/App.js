@@ -6,6 +6,7 @@ import Navbar from "./components/layout/navbar";
 import PostProductPage from "./pages/Product";
 import ContactPage from "./pages/Contact";
 import CartPage from "./pages/Cart";
+import CheckoutSuccess from "./pages/CheckoutSuccess";
 
 function App() {
   return (
@@ -15,9 +16,10 @@ function App() {
         
         <Routes>
           <Route path="/" element={<HomePage />} />
-          <Route path="product/:id" element={<PostProductPage />} />
-          <Route path="/contact" element={<ContactPage />} />
-          <Route path="/cart" element={<CartPage />} />
+          <Route path="product/:id" element={< PostProductPage />} />
+          <Route path="/contact" element={< ContactPage />} />
+          <Route path="/cart" element={< CartPage />} />
+          <Route path="/checkout" element={< CheckoutSuccess />} /> 
         </Routes>
       </div>
     </Router>

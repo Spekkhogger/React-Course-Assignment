@@ -72,3 +72,45 @@
 /* .border {
     border: 2px solid red;
 } */
+
+.cart-button {
+    position: relative;
+    border: 2px solid var(--light-text-color);
+    padding: 0.5em;
+}
+
+.cart-number {
+    position: absolute;
+    background-color: var(--first-button);
+    padding: 0.2em;
+    font-size: x-small;
+    left: 2.5em;
+    top: 2.3em;
+    border-radius: 50px;
+}
+
+.productPage {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 1em;
+    gap: 1em;
+}
+
+.singeImage{
+    max-width: 400px;
+}
+
+.productTitle {
+    font-size: 30pt;
+}
+
+.oldPrice{
+    text-decoration: line-through;
+    color: gray;
+}
+
+.newPrice {
+    font-size: larger;
+}

@@ -1,9 +1,9 @@
 import PropTypes from "prop-types"; 
 import { Link } from "react-router-dom";
 
-export default function ProductItem({product}) {
+export default function ProductItem({product, addToCart}) {
     const { title, price, id, imageUrl} = product; 
-	console.log(imageUrl); 
+
 
     return (
 		<div className="max-w-md productCard">
@@ -15,7 +15,9 @@ export default function ProductItem({product}) {
 					<Link to={`product/${id}`} className="flex items-center justify-center px-4 py-2 border border-transparent text-sm font-medium rounded-md text-white button-bg hover:bg-gray-600">
 						View product
 					</Link>
-					<button className="flex items-center justify-center px-4 py-2 border border-transparent text-sm font-medium rounded-md text-white button-bg hover:bg-gray-600">
+					<button 
+					// onClick={handleAddToCart} 
+					className="flex items-center justify-center px-4 py-2 border border-transparent text-sm font-medium rounded-md text-white button-bg hover:bg-gray-600">
 						Add to Cart
 					</button>
 				</div>
